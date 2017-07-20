@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  	<head>
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	    <title>index</title>
+	    <script type="text/javascript" language="javascript" src="testappengine/testappengine.nocache.js"></script>
+	    <script type="text/javascript">
+			function nif(dni) {
+			  numero = dni.substr(0,dni.length-1);
+			  let = dni.substr(dni.length-1,1);
+			  numero = numero % 23;
+			  letra='TRWAGMYFPDXBNJZSQVHLCKET';
+			  letra=letra.substring(numero,numero+1);
+			  if (letra!=let) 
+			    alert('Dni erroneo');
+			}
+		</script>
+	</head>
+  <body bgcolor="#E6E6FA">
+   
+   <h1>Formulario de inscripción</h1>
+   <p>Rellene sus datos y pulse en enviar</p>
+
+	<form action="/post" method = "POST">
+		<table bgcolor ="#FFF5EE" border="1" cellpadding="10" cellspacing="1" width="40%">
+
+			<tr>
+		       <td width="70%" bgcolor="#FFF5EE">Nombre: </td>
+		       <td width="50%"><input type = "text" name = "first_name" required /></td>
+			</tr>
+			<tr>
+		       <td width="70%">Apellido: </td>
+		       <td width="50%"><input type = "text" name = "last_name" required/></td>
+		    </tr>
+		       <tr>
+		       <td width="70%">DNI: </td>
+		       <td width="50%"><input type = "text" name = 'dni' onblur="nif(this.value)" required/></td>
+		       </tr>
+			<tr>
+		       <td width="70%">Edad:</td>
+		       <td width="50%"><input type="number" min="18" max="100" step="1" value="18" name="edad"/></td>
+		     </tr>
+		     <tr>
+		       <td width="70%">Email: </td>
+		       <td width="50%"><input type="email" name="email" required></td>
+		     </tr>
+		     <tr>
+		       <td width="70%">Sexo: </td>
+		       <td width="50%"><input type="radio" name="gender" value="male" checked> Hombre<br/><input type="radio" name="gender" value="female"> Mujer</td>
+		     </tr>
+		</table>
+		<input type = "submit" value = "Submit" />  
+	</form>
+  </body>
+</html>
+
