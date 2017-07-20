@@ -3,7 +3,6 @@ package com.poo.testapp;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Comparator;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -21,20 +20,7 @@ public class ExampleMockBBDD extends HttpServlet {
 
 		 DBAdmin dbadmin = new DBAdmin();
 		 ArrayList<Admin> list = new ArrayList<Admin>(dbadmin.findAllAdmin());
-/*		 list.sort(new Comparator<Admin>() {
 
-			@Override
-			public int compare(Admin a1, Admin a2) {
-				int r=0;
-				if(a1.getId()<a2.getId()){
-					r=-1;
-				}else if(a1.getId()>a2.getId()){
-					r=1;
-				}
-				return r;
-			}
-		});
-*/		 
 		 // Set response content type
 		 response.setContentType("text/html");
 		 

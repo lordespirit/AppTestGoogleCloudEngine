@@ -18,7 +18,8 @@ public class DBAdmin implements AdminServices {
 		HashSet<Admin> list = new HashSet<Admin>(size);
 		
 		for(int i=1;i<=size;i++){
-			Admin admin = getMockAdmin(i, "Admin"+i);
+			int random = (int) (Math.random()*999);
+			Admin admin = getMockAdmin(i, "Admin_0"+random);
 			list.add(admin);
 		}
 		
