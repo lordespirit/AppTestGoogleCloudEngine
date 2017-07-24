@@ -10,3 +10,6 @@ Las pruebas que tiene son las siguientes:
 * Permite testear el funcionamiento 'get' de HTTP (se debe poner en la ruta http los parámetros)
 * Prueba de 'post' donde pasamos ciertos parámetros para simular un registro.
 * Simulación de una base de datos.
+
+Link al deploy test:
+https://testservlet-174210.appspot.com/
